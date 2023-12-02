@@ -3,7 +3,7 @@ WORKDIR /go/src
 COPY . .
 RUN go build -o hashed_password .
 
-FROM alpine:3.15.0
+FROM alpine:3.18.5
 WORKDIR /bin
 COPY --from=builder /go/src .
 USER nobody
